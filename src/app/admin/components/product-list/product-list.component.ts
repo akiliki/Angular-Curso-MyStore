@@ -23,14 +23,14 @@ export class ProductListComponent implements OnInit {
     this.fetchProducts();
   }
 
-  fetchProducts(){
+  fetchProducts() {
     this.productsService.getAllProducts()
     .subscribe(products => {
       this.products = products;
     });
   }
 
-  deleteProduct(id: string, index: number){
+  deleteProduct(id: string, index: number) {
     this.productsService.deleteProduct(id)
     .subscribe(resp => {
       console.log(resp);

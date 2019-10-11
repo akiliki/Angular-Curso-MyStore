@@ -46,7 +46,7 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  updateProduct(){
+  updateProduct() {
     const changes: Partial<Product> = {
       price: 121,
       description: 'Cambio desc'
@@ -58,7 +58,7 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-  deleteProduct(){
+  deleteProduct() {
     this.productsService.deleteProduct('2').subscribe( resp => {
       console.log('Borrado el elemento');
     });
